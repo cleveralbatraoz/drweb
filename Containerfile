@@ -1,7 +1,7 @@
 FROM debian:trixie-slim
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends cmake g++ g++-multilib make nasm
+    && apt-get install -y --no-install-recommends cmake g++ g++-multilib lib32asan8 lib32ubsan1 make nasm
 
 WORKDIR /src
 COPY . .
